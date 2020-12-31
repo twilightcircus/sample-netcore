@@ -8,7 +8,7 @@ before_script:
       -e DOCKER_PASSWORD=${DOCKER_PASSWORD} \
       -e GITHUB_URL=${GITHUB_URL} \
       --name netcore-pipeline \
-      edwardsdl/netcore-pipeline:latest
+      tc420/netcore-pipeline:latest
 script:
   - docker exec netcore-pipeline /stages/01_clone.sh
   - docker exec netcore-pipeline /stages/02_build.sh
